@@ -1,10 +1,19 @@
 angular
 	.module('app.router')
-	.config(function($routeProvider){
+	.config(function($routeProvider , $locationProvider){
 		
-		$routeProvider.when('/list' , { 
-			templateUrl : 'resources/partials/index.html'
-			, controller : 'AppController'
-		})
+		// Provides here accessing without using # into URI
+		$locationProvider.html5Mode(false);
+		
+		$routeProvider
+			.when('/add' , { 
+				templateUrl : 'resources/partials/add-users.html'
+				, controller : 'AppController'
+			})
+			.when('/list' , { 
+				templateUrl : 'resources/partials/list-users.html'
+				, controller : 'AppController'
+			})
+			.otherwise({ redirectTo : '/list' });
 		
 	});

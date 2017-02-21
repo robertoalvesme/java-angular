@@ -8,6 +8,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.node.ArrayNode;
 import org.codehaus.jackson.node.ObjectNode;
 
 import br.com.rhfactor.model.User;
@@ -22,7 +23,7 @@ public class UserController {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{id}")
-	public ObjectNode listUser(@PathParam("id") Integer id) {
+	public ObjectNode getUser(@PathParam("id") Integer id) {
 
 		ObjectNode map = mapper.createObjectNode();
 		ObjectNode usuarioNode = mapper.createObjectNode();
@@ -39,6 +40,37 @@ public class UserController {
 		
 		map.putPOJO("user", usuarioNode);
 		
+		return map;
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("list")
+	public ObjectNode listUser() {
+		
+		ObjectNode map = mapper.createObjectNode();
+		ObjectNode usuarioNode = mapper.createObjectNode();
+		
+		ArrayNode arrayNode = mapper.createArrayNode();
+		
+		
+		for(int i=0; i < 10; i++){		
+			User user = new User();
+			user.setId(i);
+			user.setName("Usuario " + i);
+			
+			try{
+				usuarioNode = mapper.convertValue(user, ObjectNode.class);
+			}catch(Exception e){			
+				e.printStackTrace();
+			}
+			
+			arrayNode.add(usuarioNode);
+		}
+		
+		
+		map.putArray("users").addAll(arrayNode);
+				
 		return map;
 	}
 

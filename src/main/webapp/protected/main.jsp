@@ -18,7 +18,7 @@
 	<div ui-grid="{ data: data }" class="myGrid"></div>
 	
 	
-	<my-panel title="oi" subtitle="tudo bem?"></my-panel>
+	<my-panel title="oi" subtitle="tudo bem?"><p>Funcionando</p></my-panel>
 	
 		
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>

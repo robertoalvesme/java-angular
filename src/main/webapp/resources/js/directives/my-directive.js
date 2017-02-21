@@ -12,7 +12,10 @@ angular
 			, subtitle : '@subtitle'
 		}
 		
-		ddo.template = '<div><h3>{{title}}<small>{{subtitle}}</small></h3></div>'
+		// Keep child itens from HTML into directive
+		ddo.transclude = true;
+		
+		ddo.template = '<div><h3>{{title}}<small>{{subtitle}}</small></h3><div ng-transclude></div></div>';
 		
 		return ddo;
 		

@@ -2,7 +2,8 @@ angular
 	
 	.module('main')
 	
-	.controller('AppController',['$scope','$rootScope',function($scope , $rootScope){
+	.controller('AppController',['$scope','$rootScope','$state'
+		, function($scope , $rootScope , $state ){
 		
 		// console.log('entrou no app controller')
 		

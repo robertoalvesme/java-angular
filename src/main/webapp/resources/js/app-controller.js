@@ -9,4 +9,10 @@ angular
 		
 		$rootScope.variavel = { nome : 'oi' };
 		
+		$scope.data = [
+			{ id : 10 , name : 'Usuario 10' }
+			, { id : 11 , name : 'Usuario 11' }
+			, { id : 12 , name : 'Usuario 12' }
+		]
+		
 	}]);

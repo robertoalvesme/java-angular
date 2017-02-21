@@ -22,7 +22,13 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.0.2/ui-grid.js'></script>
 	
+	<!-- Definições -->
 	<script src="<c:url value='/resources/js/app-module.js' />"></script>
+	
+	<!-- Services -->
+	<script src="<c:url value='/resources/js/services/user-service.js' />"></script>
+	
+	<!-- Controllers -->
 	<script src="<c:url value='/resources/js/app-controller.js' />"></script>
 	
 </body>

@@ -13,10 +13,10 @@
 <link rel="stylesheet" href="<c:url value='/resources/css/effects.css' />" />
 
 </head>
-<body ng-controller="AppController">
+<body>
 
 	<div class="container">
-		<section id="main">
+		<section id="main" class="row">
 			<ng-view></ng-view>
 		</section>
 	</div>
@@ -39,6 +39,7 @@
 	
 	<!-- Controllers -->
 	<script src="<c:url value='/resources/js/app-controller.js' />"></script>
+	<script src="<c:url value='/resources/js/controllers/user-add-controller.js' />"></script>
 	
 </body>
 </html>

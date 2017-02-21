@@ -2,19 +2,12 @@ angular
 	
 	.module('main')
 	
-	.controller('AppController',['$scope','$rootScope', '$http' , 'UserService'
-		, function($scope , $rootScope , $http , UserService ){
-		
-		// console.log('entrou no app controller')
-		
-		$rootScope.variavel = { nome : 'oi' };
-		
-		// Chamar o service
-		UserService.listUser();
-		
+	.controller('AppController',['$scope','$rootScope','UserService'
+		, function($scope , $rootScope , UserService ){
+
 		$scope.filtro = "";
 		
-		$scope.data = [ 
+		$rootScope.data = [ 
 			{ id : 0 , name : 'Amanda' } 
 			, { id : 1 , name : 'Thiago' } 
 			, { id : 1 , name : 'Bernardo' }
@@ -24,12 +17,8 @@ angular
 			, { id : 1 , name : 'Suzana' }
 		];
 		
-		/*
-		$http.get('protected/rest/user/list')
-			.success(function(users){
-				console.log( users );
-				$scope.data = users;
-			});
-		*/
-		
-	}]);
+	}])
+	
+	
+	
+	;

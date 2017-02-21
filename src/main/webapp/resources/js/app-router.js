@@ -8,7 +8,7 @@ angular
 		$routeProvider
 			.when('/add' , { 
 				templateUrl : 'resources/partials/add-users.html'
-				, controller : 'AppController'
+				, controller : 'UserAddController'
 			})
 			.when('/list' , { 
 				templateUrl : 'resources/partials/list-users.html'

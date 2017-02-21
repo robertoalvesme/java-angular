@@ -9,8 +9,6 @@ angular
 		// Definido dados privados da diretiva
 		ddo.scope = {
 			title : '@' // Using @ indicates that the value has the same name of the attribute
-			, subtitle : '@subtitle'
-			, class : '@'
 		}
 		
 		// Keep child itens from HTML into directive

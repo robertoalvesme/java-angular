@@ -13,29 +13,37 @@
 
 </head>
 <body ng-controller="AppController">
-	
+
+	<div class="container">
 	
 	<h1>Teste de listagem</h1>
-	<div>
-		<form>
-			<input type="text" ng-model="filtro" />
-		</form>
-	</div>
 	
 	<div class="row">
-		<my-panel ng-repeat="user in data | filter : filtro" class="fading col-md-5" title="{{ user.name }}">
-			<p>Usuário {{user.id}}</p>
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<form>
+				<input class="form-control" type="text" ng-model="filtro" ng-model-options="{ debounce: 500 }" placeholder="Filtrar" />
+			</form>
+		</div>
+	</div>
+	
+	
+	<div class="row">
+		<my-panel class="col-md-2 col-sm-3 col-xs-4 fading" ng-repeat="user in data | filter : filtro" title="{{ user.name }}">
+			<p>Detalhes do Usuário {{user.id}} {{ user.name }}</p>
 		</my-panel>
 	</div>
 	
 	
-	
+	<!-- 
 	<div ui-grid="{ data: data }" class="myGrid"></div>
+	 -->
 	
+	</div>
 		
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.0.2/ui-grid.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular-animate.min.js"></script>
+	
+	
 	
 	<!-- Directives -->
 	<script src="<c:url value='/resources/js/directives/my-directive.js' />"></script>

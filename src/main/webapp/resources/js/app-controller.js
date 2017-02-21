@@ -12,7 +12,17 @@ angular
 		// Chamar o service
 		UserService.listUser();
 		
-		$scope.data = [ { id : 0 , name : 'usuario 0' } , { id : 1 , name : 'usuario 1' } ]
+		$scope.filtro = "";
+		
+		$scope.data = [ 
+			{ id : 0 , name : 'Amanda' } 
+			, { id : 1 , name : 'Thiago' } 
+			, { id : 1 , name : 'Bernardo' }
+			, { id : 1 , name : 'Benjamin' }
+			, { id : 1 , name : 'Roberto' }
+			, { id : 1 , name : 'Clarisse' }
+			, { id : 1 , name : 'Suzana' }
+		];
 		
 		/*
 		$http.get('protected/rest/user/list')

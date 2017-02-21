@@ -13,12 +13,19 @@
 	
 	
 	<h1>Teste de listagem</h1>
+	<div>
+		<form>
+			<input type="text" ng-model="filtro" />
+		</form>
+	</div>
+	
+	<my-panel ng-repeat="user in data | filter : filtro" title="{{ user.name }}">
+		<p>Usuário {{user.id}}</p>
+	</my-panel>
+	
 	
 	
 	<div ui-grid="{ data: data }" class="myGrid"></div>
-	
-	
-	<my-panel title="oi" subtitle="tudo bem?"><p>Funcionando</p></my-panel>
 	
 		
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>

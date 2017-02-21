@@ -10,7 +10,7 @@ angular
 		}
 		
 		this.listUser = function(){
-			console.log('chamando listUser');
+			console.log('chamando listUser novo');
 		}
 		
 	}])

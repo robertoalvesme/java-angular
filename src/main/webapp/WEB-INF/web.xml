@@ -65,12 +65,13 @@
 		<url-pattern>/protected/*</url-pattern>
 	</filter-mapping>  
 	 -->
-	
-	<!-- 
+	 
 	<servlet-mapping>
 		<servlet-name>javax.ws.rs.core.Application</servlet-name>
 		<url-pattern>/protected/rest/*</url-pattern>
 	</servlet-mapping>
+	
+	<!--
 	<error-page>
 		<error-code>404</error-code>
 		<location>/login.jsp</location>

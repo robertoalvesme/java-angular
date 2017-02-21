@@ -15,7 +15,7 @@ angular
 		// Keep child itens from HTML into directive
 		ddo.transclude = true;
 		
-		ddo.template = '<div><h3>{{title}}<small>{{subtitle}}</small></h3><div ng-transclude></div></div>';
+		ddo.templateUrl = 'resources/js/directives/my-panel.html';
 		
 		return ddo;
 		

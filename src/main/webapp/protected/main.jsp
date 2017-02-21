@@ -6,7 +6,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.0.2/ui-grid.css" />
+<link rel="stylesheet" href="<c:url value='/resources/css/effects.css' />" />
 
 </head>
 <body ng-controller="AppController">
@@ -19,9 +22,11 @@
 		</form>
 	</div>
 	
-	<my-panel ng-repeat="user in data | filter : filtro" title="{{ user.name }}">
-		<p>Usuário {{user.id}}</p>
-	</my-panel>
+	<div class="row">
+		<my-panel ng-repeat="user in data | filter : filtro" class="fading col-md-5" title="{{ user.name }}">
+			<p>Usuário {{user.id}}</p>
+		</my-panel>
+	</div>
 	
 	
 	

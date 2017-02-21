@@ -7,8 +7,11 @@ angular
 		
 		
 		$scope.submitForm = function( ){
-			
-			console.log( $scope.user );
+			if( $scope.userAddForm.$valid ){
+				UserService.addUser( $scope.user );
+				
+				$scope.message = "Usuario cadastrado!";
+			}
 		}
 		
 	}])

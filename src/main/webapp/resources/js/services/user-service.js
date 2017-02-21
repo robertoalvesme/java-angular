@@ -13,4 +13,9 @@ angular
 			console.log('chamando listUser novo');
 		}
 		
+		this.addUser = function( user ){
+			console.log('Adicionou o usuário');
+			console.log(user);
+		}
+		
 	}])

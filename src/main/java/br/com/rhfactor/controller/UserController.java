@@ -23,7 +23,7 @@ public class UserController {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("{id}")
+	@Path("{id : \\d+ }")
 	public ObjectNode getUser(@PathParam("id") Integer id) {
 
 		ObjectNode map = mapper.createObjectNode();

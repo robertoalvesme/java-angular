@@ -61,6 +61,39 @@ public class UserController {
 			
 			try{
 				usuarioNode = mapper.convertValue(user, ObjectNode.class);
+				usuarioNode.remove("point");
+			}catch(Exception e){			
+				e.printStackTrace();
+			}
+			
+			arrayNode.add(usuarioNode);
+		}
+		
+		
+		map.putArray("users").addAll(arrayNode);
+				
+		return map;
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("byPoints")
+	public ObjectNode getUsersByUser(){
+		ObjectNode map = mapper.createObjectNode();
+		ObjectNode usuarioNode = mapper.createObjectNode();
+		
+		ArrayNode arrayNode = mapper.createArrayNode();
+		
+		
+		for(int i=0; i < 10; i++){
+			
+			User user = new User();
+			user.setId(i);
+			user.setName("Usuario " + i);
+			user.setPoint( i * 2);
+			
+			try{
+				usuarioNode = mapper.convertValue(user, ObjectNode.class);
 			}catch(Exception e){			
 				e.printStackTrace();
 			}

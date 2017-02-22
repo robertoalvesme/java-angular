@@ -17,5 +17,10 @@ angular
 					console.log('Adicionou o usuário');
 					console.log(user);
 				}
+				, getUserPoints : function(){
+					var promisse = $http.get('protected/rest/user/byPoints');
+					return promisse;
+				}
+				
 			}
 	}])

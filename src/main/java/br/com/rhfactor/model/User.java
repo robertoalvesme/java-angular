@@ -6,6 +6,8 @@ public class User {
 
 	private String name;
 
+	private Integer point = 0;
+
 	public Integer getId() {
 		return id;
 	}
@@ -20,6 +22,14 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Integer getPoint() {
+		return point;
+	}
+
+	public void setPoint(Integer point) {
+		this.point = point;
 	}
 
 }

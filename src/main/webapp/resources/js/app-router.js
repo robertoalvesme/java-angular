@@ -14,6 +14,10 @@ angular
 				templateUrl : 'resources/partials/list-users.html'
 				, controller : 'AppController'
 			})
+			.when('/edit/:userId', {
+				templateUrl : 'resources/partials/add-users.html'
+					, controller : 'UserEditController'
+			})
 			.otherwise({ redirectTo : '/list' });
 		
 	});

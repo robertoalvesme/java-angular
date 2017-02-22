@@ -16,5 +16,6 @@
 <div class="row">
 	<my-panel class="col-md-2 col-sm-3 col-xs-4 fading" ng-repeat="user in data | filter : filtro" title="{{ user.name }}">
 		<p>Detalhes do Usuário {{user.id}} {{ user.name }}</p>
+		<a href="#/edit/{{ user.id }}" class="btn btn-primary">Editar</a>
 	</my-panel>
 </div>

@@ -18,7 +18,10 @@ angular
 	.controller('UserEditController', ['$scope','$rootScope','$routeParams','UserService'
 		, function($scope , $rootScope , $routeParams , UserService ){
 		
-		$scope.user = { name : "Usuario selecionado " + $routeParams.userId };
+		$scope.user = {};
+		UserService.getUser( $routeParams.userId ).success(function(data){
+			$scope.user = data.user;
+		});
 		
 		
 		$scope.submitForm = function( ){

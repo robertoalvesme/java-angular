@@ -5,8 +5,9 @@ angular
 	.factory('UserService',['$http',
 		function($http){
 			return {
-				getUser : function(){
-					console.log('chamando getUser');
+				getUser : function( userId ){
+					var promisse = $http.get('protected/rest/user/' + userId );
+					return promisse;
 				}
 				, listUser : function(){
 					var promisse = $http.get('protected/rest/user/list');

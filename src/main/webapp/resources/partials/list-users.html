@@ -18,4 +18,7 @@
 		<p>Detalhes do Usuário {{user.id}} {{ user.name }}</p>
 		<a href="#/edit/{{ user.id }}" class="btn btn-primary">Editar</a>
 	</my-panel>
+	
+	<fusioncharts width="600" height="400" type="column2d" datasource="{{userPointCharts}}"></fusioncharts>
+	
 </div>

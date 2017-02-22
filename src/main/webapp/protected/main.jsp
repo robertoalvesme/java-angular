@@ -20,12 +20,13 @@
 			<ng-view></ng-view>
 		</section>
 	</div>
-	
-	
+
 	<!-- See dependencies at https://cdnjs.com/libraries/angular.js/1.3.13 -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular-animate.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular-route.min.js"></script>
+	<script src="<c:url value='/resources/js/libs/fusioncharts/fusioncharts.js' />"></script>
+	<script src="<c:url value='/resources/js/libs/fusioncharts/angular-fusioncharts.min.js' />"></script>
 	
 	<!-- Directives -->
 	<script src="<c:url value='/resources/js/directives/my-directive.js' />"></script>

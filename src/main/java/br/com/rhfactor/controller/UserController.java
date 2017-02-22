@@ -10,6 +10,7 @@ import javax.ws.rs.core.MediaType;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.node.ArrayNode;
 import org.codehaus.jackson.node.ObjectNode;
+import org.codehaus.jackson.node.TextNode;
 
 import br.com.rhfactor.model.User;
 
@@ -94,6 +95,14 @@ public class UserController {
 			
 			try{
 				usuarioNode = mapper.convertValue(user, ObjectNode.class);
+				
+				// Change columns to Chart Style
+				usuarioNode.put("label", new TextNode( usuarioNode.get("name").asText() ));
+				usuarioNode.remove("name");
+				
+				usuarioNode.put("value", new TextNode( usuarioNode.get("point").asText() ));
+				usuarioNode.remove("point");
+				
 			}catch(Exception e){			
 				e.printStackTrace();
 			}

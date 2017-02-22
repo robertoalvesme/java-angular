@@ -5,4 +5,5 @@ angular.module('main',[
 	'myDirective'
 	, 'ngAnimate'
 	, 'app.router'
+	,'ng-fusioncharts'
 ]);
